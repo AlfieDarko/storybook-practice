@@ -1,0 +1,73 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "legacyDecorators": true
+    }
+  },
+  "globals": {
+    "newrelic": true,
+    "gertcha": true,
+    "Microsoft": true,
+    "google": true,
+    "ADRUM": true
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "prettier", "prettier/react"],
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "require-yield": "off",
+    "react/display-name": [
+      "off",
+      {
+        "ignoreTranspilerName": false
+      }
+    ],
+    "react/jsx-no-duplicate-props": [
+      2,
+      {
+        "ignoreCase": true
+      }
+    ],
+    "react/jsx-no-literals": 2,
+    "react/jsx-no-undef": 2,
+    "react/sort-prop-types": [
+      2,
+      {
+        "ignoreCase": true
+      }
+    ],
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/no-did-mount-set-state": 2,
+    "react/no-did-update-set-state": 2,
+    "react/no-direct-mutation-state": 2,
+    "react/no-unknown-property": 2,
+    "react/prop-types": 1,
+    "react/react-in-jsx-scope": 2,
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": false,
+        "html": false
+      }
+    ],
+    "no-useless-escape": "off",
+    "no-restricted-globals": [
+      2,
+      {
+        "name": "fdescribe",
+        "message": "Doh! You forgot the fdescribe dummy!"
+      },
+      {
+        "name": "fit",
+        "message": "Doh! You forgot the fit dummy!"
+      }
+    ]
+  }
+}
